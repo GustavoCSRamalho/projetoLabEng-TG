@@ -8,5 +8,4 @@ public interface UsuarioDao {
     public boolean insert(Usuario usuario);
     public Usuario findById(Long id);
     public Usuario findByNomeUsuario(String nomeUsuario);
-    
 }
