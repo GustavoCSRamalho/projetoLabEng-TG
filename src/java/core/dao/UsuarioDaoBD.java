@@ -16,7 +16,9 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
     }
     
     //varivaies para comandos de sql
-    protected Connection conn = null;
+    /*protected Connection conn = null;
+    ; */
+    
     protected Statement st = null;
     protected PreparedStatement pst = null;
     protected ResultSet rs = null;
