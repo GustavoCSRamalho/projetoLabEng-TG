@@ -21,7 +21,6 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
     protected PreparedStatement pst = null;
     protected ResultSet rs = null;
      
-
     //metodo para inserir os usuarios no banco
     @Override
     public boolean insert(Usuario usuario) {
@@ -37,8 +36,6 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
              /*Aqui passo o objeto "conn" e atribuo ao meu objeto sql o que permitira inserir comandos do BD
              em sql
              */
-
-
 // TAH ERRADO AKI
              sql = this.conn.prepareStatement(""
                      + "INSERT INTO usuario("
@@ -93,5 +90,4 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
     public Usuario findById(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
