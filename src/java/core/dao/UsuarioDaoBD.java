@@ -16,9 +16,6 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
     }
     
     //varivaies para comandos de sql
-    /*protected Connection conn = null;
-    ; */
-    
     protected Statement st = null;
     protected PreparedStatement pst = null;
     protected ResultSet rs = null;
@@ -42,8 +39,8 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
              sql = this.conn.prepareStatement(""
                      + "INSERT INTO usuario("
                      + "nome,"
-                     + "senha,"
-                     + "VALUES(?,?);");
+                     + "senha)"
+                     + " VALUES(?,?);");
              
              sql.setString(1, usuario.getNome());
              sql.setString(2, usuario.getSenha());
@@ -54,7 +51,7 @@ public class UsuarioDaoBD extends ConexaoBD implements UsuarioDao {
             System.out.println("Erro no insert CadastroCliente");
             cadastro = false;
     }
-         return false;
+         return cadastro;
 }       
     
     @Override

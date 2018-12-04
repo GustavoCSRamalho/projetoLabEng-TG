@@ -1,6 +1,6 @@
 package controller;
 
-import api.model.Admin;
+//import api.model.Admin;
 import api.model.Pessoa;
 import api.model.Usuario;
 import core.servico.LoginServicoImpl;
@@ -39,9 +39,9 @@ public class Index extends HttpServlet{
                 sc.getRequestDispatcher("jsp/pergunta.jsp");
             }
             //condição para verificar se é um admin inserido
-            else if(p instanceof Admin){
+           /* else if(p instanceof Admin){
                 sc.getRequestDispatcher("jsp/paginaAdm.jsp");
-            }
+            }*/
         }
         else{
             request.setAttribute("Usuario ou admin nao cadastrado", true);

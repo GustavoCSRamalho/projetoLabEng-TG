@@ -3,6 +3,7 @@ package controller;
 import api.model.Usuario;
 import core.servico.CadastroUsuarioServico;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,12 +38,19 @@ public class Cadastro extends HttpServlet {
         u.setSenha(senha);
         
         boolean cadastro = novo.insert(u);
+        System.out.println(cadastro);
         
          if (cadastro == true){
             request.setAttribute("Cadastrado com sucesso", cadastro);
+            //sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+            //RequestDispatcher view = request.getRequestDispatcher("/jsp/index.jsp");
+            //view.forward(request, response);
+            response.sendRedirect("http://localhost:8080/");
+
         }
         else{
             request.setAttribute("Erro ao cadaastrar",  cadastro);
+            
         }
     }
     
@@ -50,6 +58,6 @@ public class Cadastro extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         ServletContext sc = request.getServletContext();
         
-        sc.getRequestDispatcher("/jsp/Cadastro.jsp").forward(request, response);
+        sc.getRequestDispatcher("/jsp/cadastro.jsp").forward(request, response);
     }
 }

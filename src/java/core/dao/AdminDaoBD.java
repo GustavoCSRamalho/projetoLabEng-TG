@@ -1,4 +1,4 @@
-package core.dao;
+/*package core.dao;
 
 import api.dao.AdminDao;
 import api.model.Admin;
@@ -16,7 +16,6 @@ public class AdminDaoBD extends ConexaoBD implements AdminDao {
     }
     
     //varivaies para comandos de sql
-    private Connection conn = null;
     private Statement st = null;
     private PreparedStatement pst = null;
     private ResultSet rs = null;
@@ -62,3 +61,4 @@ public class AdminDaoBD extends ConexaoBD implements AdminDao {
         return admin;
     }
 }
+*/

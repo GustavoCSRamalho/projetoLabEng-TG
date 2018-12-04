@@ -1,4 +1,4 @@
-package api.model;
+/*package api.model;
 
 public class Admin extends Pessoa {
     
@@ -12,4 +12,4 @@ public class Admin extends Pessoa {
         this.idAdmin = idAdmin;
     }
     
-}
+}*/
