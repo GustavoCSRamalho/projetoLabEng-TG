@@ -5,6 +5,7 @@ import api.model.Pessoa;
 import api.model.Usuario;
 import core.servico.LoginServicoImpl;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +37,10 @@ public class Index extends HttpServlet{
         if(p != null && p.getSenha().equals(senha)){
             //condição para verificar se é um usuario inserido
             if(p instanceof Usuario){
-                sc.getRequestDispatcher("jsp/pergunta.jsp");
+                sc.getRequestDispatcher("/jsp/pergunta.jsp").forward(request, response);
+                RequestDispatcher view = request.getRequestDispatcher("/jsp/pergunta.jsp");
+
+                //response.sendRedirect("http://localhost:8080/pergunta.jsp");
             }
             //condição para verificar se é um admin inserido
            /* else if(p instanceof Admin){

@@ -42,15 +42,15 @@ public class Cadastro extends HttpServlet {
         
          if (cadastro == true){
             request.setAttribute("Cadastrado com sucesso", cadastro);
-            //sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
-            //RequestDispatcher view = request.getRequestDispatcher("/jsp/index.jsp");
+            
+            sc.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("/jsp/index.jsp");
+            
             //view.forward(request, response);
-            response.sendRedirect("http://localhost:8080/");
-
+            //response.sendRedirect("http://localhost:8080/");
         }
         else{
             request.setAttribute("Erro ao cadaastrar",  cadastro);
-            
         }
     }
     
